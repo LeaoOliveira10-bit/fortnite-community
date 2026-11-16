@@ -1,0 +1,129 @@
+
+/* FORTNITE COMMUNITY MANAGER */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #101323, #191d36);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+
+header {
+  padding: 25px;
+  background: linear-gradient(120deg, #202741, #30365c);
+  border-left: 5px solid #00e5ff;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px #00000055;
+}
+
+h1 {
+  color: #00e5ff;
+  font-size: 25px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* CARTÕES */
+
+.card {
+  background: #202741;
+  padding: 22px;
+  margin-top: 20px;
+  border: 1px solid #343d5c;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px #00000033;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* BOTÕES */
+
+button {
+  background: linear-gradient(90deg, #00bde8, #00e5ff);
+  color: #101323;
+  border: none;
+  padding: 13px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #00e5ff66;
+}
+
+/* CAMPO DE TEXTO */
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  background: #11182c;
+  color: white;
+  border: 1px solid #414c70;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #00e5ff;
+}
+
+/* LISTA DE JOGADORES */
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 13px;
+  margin: 8px 0;
+  background: #303954;
+  border-left: 3px solid #00e5ff;
+  border-radius: 7px;
+}
+
+/* RODAPÉ */
+
+footer {
+  margin-top: 35px;
+  padding: 15px;
+  color: #8993ad;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+
+  .card {
+    padding: 17px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
