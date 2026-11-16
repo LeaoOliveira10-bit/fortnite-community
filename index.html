@@ -4,71 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Fortnite Community Manager</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 20px;
-      background: #101323;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      padding: 20px;
-      background: #1b2038;
-      border-left: 5px solid #00e5ff;
-      border-radius: 12px;
-    }
-
-    h1 {
-      color: #00e5ff;
-      font-size: 25px;
-    }
-
-    .card {
-      background: #202741;
-      padding: 20px;
-      margin-top: 18px;
-      border-radius: 12px;
-    }
-
-    button {
-      background: #00bde8;
-      color: #101323;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: none;
-    }
-
-    li {
-      padding: 10px;
-      background: #303954;
-      margin: 8px 0;
-      border-radius: 7px;
-    }
-
-    footer {
-      margin-top: 30px;
-      color: #8993ad;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -82,15 +22,24 @@
   <section class="card">
     <h2>Discord</h2>
     <p>Integração com Discord em desenvolvimento.</p>
-    <button onclick="alert('Integração em breve!')">
+
+    <button id="connectDiscord">
       Conectar Discord
     </button>
   </section>
 
   <section class="card">
     <h2>Adicionar jogador</h2>
-    <input id="player" placeholder="Nome do jogador">
-    <button onclick="addPlayer()">Adicionar</button>
+
+    <input
+      id="player"
+      type="text"
+      placeholder="Nome do jogador"
+    >
+
+    <button id="addPlayer">
+      Adicionar jogador
+    </button>
   </section>
 
   <section class="card">
@@ -101,41 +50,6 @@
   <footer>
     Fortnite Community Manager © 2026
   </footer>
-
-  <script>
-    const players = JSON.parse(
-      localStorage.getItem("players") || "[]"
-    );
-
-    function renderPlayers() {
-      const list = document.getElementById("players");
-      list.innerHTML = "";
-
-      players.forEach(player => {
-        const item = document.createElement("li");
-        item.textContent = player;
-        list.appendChild(item);
-      });
-    }
-
-    function addPlayer() {
-      const input = document.getElementById("player");
-      const name = input.value.trim();
-
-      if (!name) {
-        alert("Digite o nome do jogador!");
-        return;
-      }
-
-      players.push(name);
-      localStorage.setItem("players", JSON.stringify(players));
-
-      input.value = "";
-      renderPlayers();
-    }
-
-    renderPlayers();
-  </script>
 
 </body>
 </html>
