@@ -1,6 +1,90 @@
 
-/* RANKING E SELEÇÃO DE JOGADORES */
+/* FORTNITE COMMUNITY MANAGER - V2 */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top right, #29245b, transparent 40%),
+    linear-gradient(135deg, #0b1020, #151b32);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+
+header {
+  padding: 30px;
+  background: linear-gradient(120deg, #202741, #30265b);
+  border-left: 6px solid #00e5ff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px #0008;
+}
+
+h1 {
+  color: #00e5ff;
+  font-size: 27px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 8px;
+  color: #c5cce0;
+}
+
+/* CARTÕES */
+
+.card {
+  padding: 25px;
+  margin-top: 22px;
+  background: linear-gradient(145deg, #202741, #191f35);
+  border: 1px solid #384363;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px #0005;
+}
+
+h2 {
+  color: #00e5ff;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.card p {
+  color: #b8c1d9;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* BOTÕES */
+
+button {
+  padding: 13px 20px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #00bde8, #00e5ff);
+  color: #101323;
+  border: none;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px #00e5ff66;
+}
+
+/* CAMPOS */
+
+input,
 select {
   width: 100%;
   padding: 14px;
@@ -9,26 +93,73 @@ select {
   color: white;
   border: 1px solid #414c70;
   border-radius: 8px;
+  outline: none;
 }
 
-#ranking {
-  padding-left: 25px;
+input:focus,
+select:focus {
+  border-color: #00e5ff;
 }
 
-#ranking li {
-  padding: 15px;
-  margin: 10px 0;
-  background: linear-gradient(90deg, #303954, #202741);
+/* LISTAS */
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+li {
+  padding: 14px;
+  margin: 9px 0;
+  background: #303954;
+  border-radius: 8px;
   border-left: 4px solid #00e5ff;
+  color: white;
 }
 
 #ranking li:first-child {
   border-left-color: #ffd700;
+  background: linear-gradient(90deg, #51451f, #303954);
 }
+
+/* BOTÃO REMOVER */
 
 #players button {
   display: block;
-  margin-top: 10px;
-  background: #ff5364;
+  background: #e84c65;
   color: white;
+}
+
+/* RODAPÉ */
+
+footer {
+  margin-top: 35px;
+  padding: 20px;
+  color: #8993ad;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
